@@ -4,35 +4,37 @@
 
 @layer base {
   :root {
-    --background: 210 30% 98%;
-    --foreground: 216 45% 12%;
+    --background: 255 40% 97%;
+    --foreground: 250 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 216 45% 12%;
+    --card-foreground: 250 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 216 45% 12%;
+    --popover-foreground: 250 30% 12%;
 
-    --primary: 216 60% 18%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 252 45% 16%;
+    --primary-foreground: 255 40% 98%;
 
-    --secondary: 214 32% 94%;
-    --secondary-foreground: 216 60% 18%;
+    --secondary: 255 45% 94%;
+    --secondary-foreground: 252 45% 16%;
 
-    --muted: 214 32% 94%;
-    --muted-foreground: 216 15% 45%;
+    --muted: 255 40% 94%;
+    --muted-foreground: 250 12% 45%;
 
-    --accent: 38 92% 50%;
-    --accent-foreground: 216 60% 12%;
+    --accent: 160 62% 54%;
+    --accent-foreground: 252 45% 12%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 255 40% 98%;
 
-    --border: 214 25% 88%;
-    --input: 214 25% 88%;
-    --ring: 216 60% 18%;
+    --border: 255 30% 88%;
+    --input: 255 30% 88%;
+    --ring: 262 60% 55%;
 
     --radius: 0.4rem;
+
+    --violet: 262 70% 58%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -113,5 +115,25 @@
   }
   .text-balance {
     text-wrap: balance;
+  }
+  .text-violet {
+    color: hsl(var(--violet));
+  }
+  .bg-violet {
+    background-color: hsl(var(--violet));
+  }
+  .lavender-glow {
+    background:
+      radial-gradient(
+        60% 60% at 80% 20%,
+        hsl(var(--violet) / 0.18),
+        transparent 70%
+      ),
+      radial-gradient(
+        50% 50% at 20% 80%,
+        hsl(160 62% 54% / 0.12),
+        transparent 70%
+      ),
+      linear-gradient(135deg, hsl(255 50% 96%), hsl(255 45% 92%));
   }
 }

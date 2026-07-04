@@ -102,8 +102,8 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-primary grid place-items-center">
-              <Icon name="Zap" size={18} className="text-accent" />
+            <div className="w-8 h-8 rounded bg-violet grid place-items-center">
+              <Icon name="Zap" size={18} className="text-white" />
             </div>
             <span className="font-display font-700 text-lg uppercase tracking-wide text-primary">Эльмопро</span>
           </div>
@@ -120,28 +120,36 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-40" />
-        <div className="absolute -top-32 -right-32 w-[36rem] h-[36rem] rounded-full bg-primary/5 blur-3xl" />
-        <div className="relative max-w-6xl mx-auto px-6 w-full">
-          <div className="flex items-center gap-3 mb-6 animate-fade-up">
-            <span className="h-px w-8 bg-accent" />
-            <span className="font-mono text-xs tracking-[0.2em] uppercase text-accent">Аналитический отчёт</span>
+      <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden lavender-glow">
+        <div className="absolute inset-0 grid-bg opacity-20" />
+        <div className="relative max-w-6xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-3 mb-6 animate-fade-up">
+              <span className="h-px w-8 bg-violet" />
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-violet">Коммерческий отчёт · Tolka Digital</span>
+            </div>
+            <h1 className="font-display font-700 uppercase tracking-tight text-primary leading-[0.95] text-5xl md:text-7xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              Эльмопро<br />
+              <span className="text-violet">за июнь 2026</span>
+            </h1>
+            <p className="mt-8 max-w-xl text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              Электромонтажные работы под ключ. Ключевые показатели, статистика по каналам и объектам, выводы и точки роста за отчётный месяц.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+              <a href="#stats" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-500 hover:opacity-90 transition-opacity">
+                Смотреть статистику <Icon name="ArrowDown" size={16} />
+              </a>
+              <a href="#insights" className="inline-flex items-center gap-2 border border-violet/40 px-6 py-3 rounded font-500 text-violet hover:bg-violet/5 transition-colors">
+                Выводы <Icon name="Lightbulb" size={16} />
+              </a>
+            </div>
           </div>
-          <h1 className="font-display font-700 uppercase tracking-tight text-primary leading-[0.95] text-5xl md:text-8xl animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Эльмопро<br />
-            <span className="text-muted-foreground">за июнь 2026</span>
-          </h1>
-          <p className="mt-8 max-w-xl text-lg text-muted-foreground animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Электромонтажные работы под ключ. Ключевые показатели, статистика по каналам и объектам, выводы и точки роста за отчётный месяц.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <a href="#stats" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded font-500 hover:opacity-90 transition-opacity">
-              Смотреть статистику <Icon name="ArrowDown" size={16} />
-            </a>
-            <a href="#insights" className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded font-500 text-primary hover:bg-secondary transition-colors">
-              Выводы <Icon name="Lightbulb" size={16} />
-            </a>
+          <div className="hidden lg:block animate-fade-up" style={{ animationDelay: '0.25s' }}>
+            <img
+              src="https://cdn.poehali.dev/projects/fb97a217-3e90-45a5-8b04-e633bf5cb1e3/bucket/b013f4bc-d2ed-4258-8031-071a173b4322.png"
+              alt="Tolka Digital"
+              className="w-full rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
       </section>
